@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome', ['text' => 'Desktop']);
+});
+
+Route::get('/mobile', function () {
+    return view('welcome', ['text' => 'Mobile']);
 });
 
 Auth::routes();
